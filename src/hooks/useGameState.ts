@@ -5,7 +5,7 @@ const GAME_STATE_KEY = 'raspadinha_game_state';
 const CARD_COST = 4.90;
 
 const getWinLogic = (roundNumber: number) => {
-  if (roundNumber === 3) return { shouldWin: true, prizeAmount: 500.00, prizeType: 'money' };
+  if (roundNumber === 3) return { shouldWin: true, prizeAmount: 30.00, prizeType: 'money' };
   if (roundNumber === 8) return { shouldWin: true, prizeAmount: 0, prizeType: 'applewatch' };
   return { shouldWin: false, prizeAmount: 0, prizeType: 'money' };
 };
@@ -40,7 +40,7 @@ const generateWinningCard = (prizeAmount: number, prizeType: 'money' | 'applewat
     grid,
     isCompleted: false,
     hasWon: true,
-    prizeAmount: prizeType === 'applewatch' ? 2499 : prizeAmount,
+    prizeAmount: prizeType === 'applewatch' ? 1299 : prizeAmount,
     prizeType,
   };
 };
